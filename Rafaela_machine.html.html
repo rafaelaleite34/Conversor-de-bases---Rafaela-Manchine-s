@@ -1,0 +1,174 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+<!-- Modificado por Rafaela Leite | 2026.3 -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTecher's Machine</title>
+
+    <style>
+        	.card {
+		width: 500px;
+		height: fit-content;
+		background-color: hsl(0, 0%, 100%);
+		border-radius: 10px;
+		border: solid 3px #3c719d;
+		margin: 20px auto;
+		padding-left: 20px;
+	}
+
+	.texto {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+    .cor_principal {
+        color: #6b1a72
+    }
+    .italico {
+        font-style: italic
+    }
+
+    </style>
+</head>
+
+<body bgcolor="#F8F4FF">
+
+
+    <center>
+
+    <h1 class="cor_principal" style="text-align:center;">
+     CONVERSOR DE BASES NUMÉRICAS <br>
+     <p>Rafaela Machine's<p>
+    </h1>
+
+        <div class="card texto">
+        <h3>
+            <span class="cor_principal" >Digite um número decimal:</span>
+        </h3>
+        <input id="ipt_d" type="text" placeholder="Ex: 55">
+        <button onclick="converterD()">Converter</button>
+        <br><br>
+
+        <h3>
+            <span class="cor_principal" >Resultados:</span>
+        </h3>
+        <p> <span class=" italico" >Em octal:</span>
+        <div id="r1"></div>
+        </p>
+        <p> <span class=" italico" >Em hexadecimal:</span>
+        <div id="r2"></div>
+        </p>
+        <p> <span class=" italico" >Em binário:</span>
+        <div id="r3"></div>
+        </p>
+        </div>
+
+
+        <div class="card texto">
+         <h3>
+            <span class="cor_principal" >Digite um número octal:</span>
+        </h3>
+        <input id="ipt_o" type="text" placeholder="Ex: 123">
+        <button onclick="converterO()">ConverterO</button>
+        <br><br>
+
+        <h3>
+            <span class="cor_principal" >Resultados:</span>
+        </h3>
+        <p><span class=" italico" >Em decimal:</span>
+        <div id="r01"></div>
+        </p>
+        <p><span class=" italico" >Em hexadecimal:</span>
+        <div id="r02"></div>
+        </p>
+        <p><span class=" italico" >Em binário:</span>
+        <div id="r03"></div>
+        </p>
+        </div>
+
+        <div class="card texto">
+         <h3>
+            <span class="cor_principal" >Digite um número hexadecimal:</span>
+        </h3>
+        <input id="ipt_h" type="text" placeholder="Ex: 1FA">
+        <button onclick="converterH()">Converter</button>
+        <br><br>
+
+        <h3>
+            <span class="cor_principal" >Resultados:</span>
+        </h3>
+        <p><span class=" italico" >Em octal:</span>
+        <div id="r_1"></div>
+        </p>
+        <p> <span class=" italico" >Em decimal:</span>
+        <div id="r_2"></div>
+        </p>
+        <p><span class=" italico" >Em binário:</span>
+        <div id="r_3"></div>
+        </p>
+        </div>
+
+        <div class="card texto">
+        <h3>
+            <span class="cor_principal" >Digite um número binario:</span>
+        </h3>
+        <input id="ipt_b" type="text" placeholder="Ex: 100101">
+        <button onclick="converterB()">Converter</button>
+        <br><br>
+
+        <h3>Resultados:</h3>
+        <p><span class=" italico" >Em octal:</span>
+        <div id="rr1"></div>
+        </p>
+        <p><span class=" italico" >Em decimal:</span>
+        <div id="rr2"></div>
+        </p>
+        <p><span class=" italico" >Em hexadecimal:</span>
+        <div id="rr3"></div>
+        </p>
+        </div>
+    </center>
+
+    <script>
+        function converterD() {
+        var decimal = Number(ipt_d.value);
+
+            r1.innerHTML = decimal.toString(8);
+            r2.innerHTML = decimal.toString(16);
+            r3.innerHTML = decimal.toString(2);
+}
+
+        function converterO() {
+        var octal = ipt_o.value;
+        var decimal = parseInt(octal, 8);
+
+            r01.innerHTML = decimal;
+            r02.innerHTML = decimal.toString(16);
+            r03.innerHTML = decimal.toString(2);
+}
+
+        function converterH() {
+        var hexa = ipt_h.value;
+        var decimal = parseInt(hexa, 16);
+
+            r_1.innerHTML = decimal.toString(8);
+            r_2.innerHTML = decimal;
+            r_3.innerHTML = decimal.toString(2);
+}
+
+        function converterB() {
+        var binario = ipt_b.value;
+        var decimal = parseInt(binario, 2);
+
+            rr1.innerHTML = decimal.toString(8);
+            rr2.innerHTML = decimal;
+            rr3.innerHTML = decimal.toString(16);
+}
+    </script>
+</body>
+
+</html>
