@@ -1,2 +1,8 @@
 # Conversor-de-bases---Rafaela-Manchine-s
-Calculadora de conversão entre bases numéricas (decimal, binário, octal e hexadecimal), desenvolvida com HTML, CSS e JavaScript. Permite a conversão de valores entre diferentes sistemas de numeração de forma simples e rápida, além de apresentar uma interface organizada e intuitiva.
+
+Nesta atividade, desenvolvi uma calculadora de conversão entre bases numéricas (decimal, binário, octal e hexadecimal) utilizando HTML, CSS e JavaScript.
+
+Foram utilizados os métodos `toString(base)` para conversão de números decimais e `parseInt(valor, base)` para converter outras bases em decimal. Também foi aplicada estilização com CSS para melhorar a aparência e organização da interface.
+
+O projeto contribuiu para a compreensão dos sistemas de numeração e sua aplicação na programação.
+
